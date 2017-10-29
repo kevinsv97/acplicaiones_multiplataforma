@@ -30,5 +30,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Add New Item"/>
+        <EditText
+            android:id="@+id/todoText2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/addButton2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Item"/>
     </LinearLayout>
 </LinearLayout>

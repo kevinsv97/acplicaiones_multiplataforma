@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Get a reference to the todoItems child items it the database
         final DatabaseReference myRef = database.getReference("506151066");
+        final DatabaseReference myRef2 = database.getReference("codigo nuevo");
 
         // Assign a listener to detect changes to the child items
         // of the database reference.
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         // Add items via the Button and EditText at the bottom of the window.
         final EditText text = (EditText) findViewById(R.id.todoText);
         final Button button = (Button) findViewById(R.id.addButton);
+        final EditText text2 = (EditText) findViewById(R.id.todoText2);
+        final Button button2 = (Button) findViewById(R.id.addButton2);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -91,6 +94,17 @@ public class MainActivity extends AppCompatActivity {
 
                 // Set the child's data to the value passed in from the text box.
                 childRef.setValue(text.getText().toString());
+
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                // Create a new child with a auto-generated ID.
+                DatabaseReference childRef = myRef2.push();
+
+                // Set the child's data to the value passed in from the text box.
+                childRef.setValue(text2.getText().toString());
 
             }
         });
