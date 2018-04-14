@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".AlbumDetailActivity">
+
+    <ImageView
+        android:id="@+id/imagenAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="339dp"
+        app:srcCompat="@drawable/album2"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ListView
+        android:id="@+id/song_list"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="339dp" />
+</android.support.constraint.ConstraintLayout>
